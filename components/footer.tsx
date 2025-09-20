@@ -98,18 +98,18 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span className="text-neutral-400 text-sm">+1 (234) 567-8900</span>
+                <span className="text-neutral-400 text-sm">+923405955570</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span className="text-neutral-400 text-sm">Tech City, TC</span>
+                <span className="text-neutral-400 text-sm">Islamabad, Pakistan</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
-          <p className="text-neutral-400 text-sm">© 2024 Exion Solutions. All rights reserved.</p>
+          <p className="text-neutral-400 text-sm">© 2025 Exion Solution. All rights reserved.</p>
         </div>
       </div>
     </footer>

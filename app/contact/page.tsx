@@ -197,7 +197,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-white mb-1">Call Us</h3>
                     <p className="text-neutral-400 text-sm mb-2">Mon-Fri from 8am to 5pm</p>
                     <a href="tel:+1234567890" className="text-secondary hover:underline">
-                      +1 (234) 567-8900
+                      +923405955570
                     </a>
                   </div>
                 </div>
@@ -210,9 +210,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-white mb-1">Visit Us</h3>
                     <p className="text-neutral-400 text-sm mb-2">Come say hello at our office HQ</p>
                     <p className="text-secondary">
-                      123 Innovation Drive
-                      <br />
-                      Tech City, TC 12345
+                      Islamabad, Pakistan
                     </p>
                   </div>
                 </div>
