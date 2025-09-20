@@ -234,7 +234,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -308,7 +308,7 @@ export default function PortfolioPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
