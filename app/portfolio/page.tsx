@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { BackgroundBeams } from "@/components/ui/background-beams"
 import { Spotlight } from "@/components/ui/spotlight"
 import { GridBackground } from "@/components/ui/grid-background"
-import { ExternalLink, Github, ArrowRight } from "lucide-react"
+import { ExternalLink, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { useState } from "react"
@@ -17,67 +17,91 @@ export default function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Modern e-commerce solution with advanced inventory management and analytics",
-      image: "/ecommerce-platform-screenshot.jpg",
+      title: "Bayuti",
+      description: "A modern real estate platform for property listings, search, and management in the UAE.",
+      image: "/image.png",
       category: "Web Development",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      liveUrl: "#",
+      technologies: ["Next.js", "React", "Node.js", "MongoDB", "TailwindCSS", "Mapbox"],
+      liveUrl: "https://www.bayuti.com",
       githubUrl: "#",
     },
     {
       id: 2,
-      title: "Healthcare Mobile App",
-      description: "Patient management system with telemedicine capabilities",
-      image: "/healthcare-mobile-app-screenshot.jpg",
-      category: "Mobile Development",
-      technologies: ["React Native", "Firebase", "WebRTC"],
-      liveUrl: "#",
+      title: "Ask Asif",
+      description: "A business and service platform connecting users with professionals and service providers.",
+      image: "/image1.png",
+      category: "Web Development",
+      technologies: ["Next.js", "React", "Node.js", "MongoDB", "TailwindCSS", "Redux"],
+      liveUrl: "https://www.askasif.com",
       githubUrl: "#",
     },
     {
       id: 3,
-      title: "Financial Dashboard",
-      description: "Real-time financial analytics and reporting platform",
-      image: "/financial-dashboard-screenshot.jpg",
+      title: "Victor Harris Commercial",
+      description: "A luxury property and real estate website for the London market.",
+      image: "/image2.png",
       category: "Web Development",
-      technologies: ["Next.js", "TypeScript", "Chart.js", "AWS"],
-      liveUrl: "#",
+      technologies: ["WordPress", "Next.js", "React", "SEO Tools", "Google Maps API"],
+      liveUrl: "https://www.victorharris.co.uk",
       githubUrl: "#",
     },
-    {
-      id: 4,
-      title: "Logistics Management System",
-      description: "Comprehensive supply chain and logistics tracking solution",
-      image: "/logistics-management-screenshot.jpg",
-      category: "Enterprise",
-      technologies: ["Vue.js", "Python", "Docker", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 5,
-      title: "Social Media Analytics",
-      description: "AI-powered social media monitoring and analytics platform",
-      image: "/social-media-analytics-screenshot.jpg",
-      category: "AI/ML",
-      technologies: ["React", "Python", "TensorFlow", "Redis"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
+
+    
     {
       id: 6,
-      title: "Restaurant POS System",
-      description: "Complete point-of-sale system for restaurants with inventory tracking",
-      image: "/restaurant-pos-screenshot.jpg",
-      category: "Mobile Development",
-      technologies: ["Flutter", "Firebase", "Stripe", "Cloud Functions"],
-      liveUrl: "#",
+      title: "We Serve UAE",
+      description: "A service provider platform for connecting users with local businesses in the UAE.",
+      image: "/image3.png",
+      category: "Web Development",
+      technologies: ["Next.js", "React", "Node.js", "MongoDB", "TailwindCSS"],
+      liveUrl: "https://weserveuae.com",
       githubUrl: "#",
     },
+    {
+      id: 7,
+      title: "Honest Home Spaces",
+      description: "A home spaces and property website for listings and interior design inspiration.",
+      image: "/image4.png",
+      category: "Web Development",
+      technologies: ["WordPress", "Elementor", "SEO Tools", "Contact Form 7"],
+      liveUrl: "https://honesthomespaces.co.uk",
+      githubUrl: "#",
+    },
+    {
+      id: 8,
+      title: "PC Plastering and Painting",
+      description: "A website for plastering and painting services in the UK.",
+      image: "/image5.png",
+      category: "Web Development",
+      technologies: ["WordPress", "Elementor", "Contact Form 7", "SEO Tools"],
+      liveUrl: "https://pcplasteringandpainting.co.uk",
+      githubUrl: "#",
+    },
+    
+    {
+      id: 10,
+      title: "Arabic Learning Platform",
+      description: "AI-powered Arabic learning platform with personalized lessons, real-time conversation, and adaptive learning paths.",
+      image: "/image6.png",
+      category: "AI/ML",
+      technologies: ["Next.js", "React", "Node.js", "TailwindCSS", "OpenAI API"],
+      liveUrl: "https://arabic-llm-lotc.vercel.app",
+      githubUrl: "#",
+    },
+    {
+      id: 11,
+      title: "MotorMart",
+      description: "MotorMart is an e-commerce platform specializing in auto parts and accessories, offering a seamless shopping experience for car enthusiasts and professionals.",
+      image: "/image7.png",
+      category: "E-commerce",
+      technologies: ["Wix", "JavaScript", "E-commerce integrations", "Responsive Web Design"],
+      liveUrl: "https://faisalwcon.wixsite.com/motormart",
+      githubUrl: "#",
+    },
+    
   ]
 
-  const categories = ["All", "Web Development", "Mobile Development", "Enterprise", "AI/ML"]
+  const categories = ["All", "Web Development", "Mobile Development", "E-commerce", "AI/ML"]
 
   const filteredProjects =
     activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
@@ -160,24 +184,23 @@ export default function PortfolioPage() {
                 className="group rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 overflow-hidden"
               >
                 <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      // e.currentTarget.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-48 bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center" style={{display: 'none'}}>
                     <div className="text-secondary/60 text-sm">Project Screenshot</div>
                   </div>
-                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <Link href={project.liveUrl}>
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" className="bg-secondary hover:bg-secondary/90">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
-                      </Button>
-                    </Link>
-                    <Link href={project.githubUrl}>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-white/20 text-white hover:bg-white/10 bg-transparent"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
                       </Button>
                     </Link>
                   </div>
