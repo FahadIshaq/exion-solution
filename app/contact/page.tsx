@@ -183,8 +183,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email Us</h3>
                     <p className="text-neutral-400 text-sm mb-2">Send us an email anytime!</p>
-                    <a href="mailto:hello@exionsolutions.com" className="text-secondary hover:underline">
-                      hello@exionsolutions.com
+                    <a href="mailto:lloyd@exionsolution.com" className="text-secondary hover:underline">
+                      lloyd@exionsolution.com
                     </a>
                   </div>
                 </div>
